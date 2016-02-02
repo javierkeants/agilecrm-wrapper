@@ -1,0 +1,73 @@
+{
+    "id": 123,
+    "name": "500 premium subscriptions",
+    "contacts": [
+        {
+            "id": 123,
+            "type": "PERSON",
+            "created_time": 1359033520,
+            "updated_time": 1359033533,
+            "star_value": 0,
+            "lead_score": 0,
+            "tags": [
+
+            ],
+            "properties": [
+                {
+                    "type": "SYSTEM",
+                    "name": "first_name",
+                    "value": "John"
+                },
+                {
+                    "type": "SYSTEM",
+                    "name": "last_name",
+                    "value": "Olsen"
+                },
+                {
+                    "type": "SYSTEM",
+                    "name": "email",
+                    "value": "john@example.com"
+                }
+            ],
+            "domainUser": {
+                "id": 516,
+                "email": "test@example.com  ",
+                "is_admin": true,
+                "is_account_owner": false,
+                "is_disabled": false,
+                "name": "ram",
+                "password": "PASSWORD",
+                "info_json_string": "{\"logged_in_time\":1360503513,\"created_time\":1353507148}"
+            }
+        }
+    ],
+    "description": "Deal premium plan subscription",
+    "expected_value": 300,
+    "pipeline_id" :"43535822",
+    "milestone": "Open",
+    "probability": 46,
+    "close_date": 1371753000,
+    "created_time": 1360503631,
+    "entity_type": "deal",
+    "owner": {
+        "id": 516,
+        "email": "test@example.com  ",
+        "is_admin": true,
+        "is_account_owner": false,
+        "is_disabled": false,
+        "name": "ram",
+        "password": "PASSWORD",
+        "info_json_string": "{\"logged_in_time\":1360503513,\"created_time\":1353507148}"
+    },
+    "prefs": {
+        "id": 984,
+        "pic": "",
+        "template": "blue",
+        "width": "",
+        "currency": "USD",
+        "signature": "- Powered by AgileCRM",
+        "task_reminder": true,
+        "currentDomainUserName": "?"
+    },
+    "pic": ""
+}
