@@ -59,17 +59,20 @@ class FakeAgileCRM < Sinatra::Base
   end
 
   get '/dev/api/opportunity' do
-    json_response 200, 'deal', 'list_deals'
+    json_response 200, 'deals', 'list_deals'
   end
 
-
   get '/dev/api/opportunity/:id' do
-    json_response 200, 'deal', 'get_deal'
+    json_response 200, 'deals', 'get_deal'
   end
 
   post '/dev/api/opportunity' do
-    json_response 200, 'deal', 'create_deal'
+    json_response 200, 'deals', 'create_deal'
   end
+
+  put '/dev/api/opportunity' do
+    json_response 200, 'deals', 'updated_deal'
+  end  
 
   private
 

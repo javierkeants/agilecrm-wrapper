@@ -71,17 +71,20 @@ describe AgileCRMWrapper::Deal do
   #   end
   # end
 
-  # describe '.create' do
-  #   subject do
-  #     AgileCRMWrapper::Deal.create(
-  #       tags: %w(sales, rspec), first_name: 'Anita',
-  #       last_name: 'Drink', email: 'anitadrink@example.com',
-  #       custom_field: 'Im a custom field!'
-  #     )
-  #   end
+  describe '.create' do
+    subject do
+      AgileCRMWrapper::Deal.create(
+        name: 'Test Deal',
+        description: 'Test Deal description',
+        expected_value: "50000",
+        milestone: "Won",
+        probability: "95",
+        close_date: "1349980200"
+      )
+    end
 
-  #   its(:class) { should eq AgileCRMWrapper::Deal }
-  # end
+    its(:class) { should eq AgileCRMWrapper::Deal }
+  end
 
   # describe '#update' do
 
