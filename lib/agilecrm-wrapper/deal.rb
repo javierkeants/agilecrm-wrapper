@@ -3,7 +3,7 @@ require 'hashie'
 
 module AgileCRMWrapper
   class Deal < Hashie::Mash
-    SYSTEM_PROPERTIES = %w(name description milestone expected_value probability)
+    SYSTEM_PROPERTIES = %w(name description milestone expected_value probability contact_ids owner_id)
     DEAL_FIELDS = %w(id)
 
     class << self

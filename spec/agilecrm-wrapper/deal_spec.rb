@@ -80,7 +80,8 @@ describe AgileCRMWrapper::Deal do
         milestone: "Won",
         probability: "95",
         close_date: "1349980200",
-        contacts: ['123']
+        contact_ids: ['123'],
+        owner_id: '123'
       )
     end
 
