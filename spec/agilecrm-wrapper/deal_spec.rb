@@ -79,7 +79,8 @@ describe AgileCRMWrapper::Deal do
         expected_value: "50000",
         milestone: "Won",
         probability: "95",
-        close_date: "1349980200"
+        close_date: "1349980200",
+        contacts: ['123']
       )
     end
 

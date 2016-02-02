@@ -7,5 +7,9 @@
     "probability" :     "95",
     "close_date" :      "1349980200",
     "created_time" :    "1356325843",
-    "entity_type" :     "deal"
+    "entity_type" :     "deal",
+    "contacts": [{
+    		"id": 123,
+        "type": "PERSON"
+    	}]
 }
