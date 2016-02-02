@@ -70,6 +70,10 @@ class FakeAgileCRM < Sinatra::Base
     json_response 200, 'deals', 'create_deal'
   end
 
+  post '/dev/api/opportunity/email/:email' do
+    json_response 200, 'deals', 'create_deal_by_email'
+  end
+
   put '/dev/api/opportunity' do
     json_response 200, 'deals', 'updated_deal'
   end  

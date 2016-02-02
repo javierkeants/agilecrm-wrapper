@@ -45,6 +45,16 @@ module AgileCRMWrapper
         deal
       end
 
+
+      def create_by_email(email, options = {})
+        payload = parse_deal_fields(options)
+        response = AgileCRMWrapper.connection.post("opportunity/email/#{email}", payload)
+        if response && response.status == 200
+          deal = new(response.body)
+        end
+        deal
+      end
+
       # def delete(arg)
       #   AgileCRMWrapper.connection.delete("opportunity/#{arg}")
       # end

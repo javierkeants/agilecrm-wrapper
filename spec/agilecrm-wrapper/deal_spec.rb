@@ -71,7 +71,7 @@ describe AgileCRMWrapper::Deal do
   #   end
   # end
 
-  describe '.create' do
+  describe '#create' do
     subject do
       AgileCRMWrapper::Deal.create(
         name: 'Test Deal',
@@ -86,6 +86,52 @@ describe AgileCRMWrapper::Deal do
     end
 
     its(:class) { should eq AgileCRMWrapper::Deal }
+  end
+
+  # describe '#create by email' do
+  #   subject do
+  #     AgileCRMWrapper::Deal.create_by_email(''
+  #       name: 'Test Deal',
+  #       description: 'Test Deal description',
+  #       expected_value: "50000",
+  #       milestone: "Won",
+  #       probability: "95",
+  #       close_date: "1349980200",
+  #       contact_ids: ['123'],
+  #       owner_id: '123'
+  #     )
+  #   end
+
+  #   its(:class) { should eq AgileCRMWrapper::Deal }
+  # end
+
+  describe '#create by_email' do
+    let(:email) { 'anitadrink@example.com' }
+    let(:data_params) { {
+        name: 'Test Deal',
+        description: 'Test Deal description',
+        expected_value: "50000",
+        milestone: "Won",
+        probability: "95",
+        close_date: "1349980200",
+        contact_ids: ['123'],
+        owner_id: '123'}  
+      }
+    subject { AgileCRMWrapper::Deal.create_by_email(email, data_params) }
+
+    context 'given an existing email' do
+      it 'should return a deal with the corresponding email' do
+        expect(subject.get_property('email')).to eq email
+      end
+    end
+
+    context 'given an non-existing email' do
+      let(:email) { 'idontexist@example.com' }
+
+      it 'should return an empty array' do
+        expect(subject).to eq nil
+      end
+    end
   end
 
   # describe '#update' do
