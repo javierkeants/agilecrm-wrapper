@@ -1,0 +1,13 @@
+{
+    "name" :         		"Test Deal",
+    "description" :     "Test Deal description",
+    "expected_value" :  "50000",
+    "pipeline_id" :     "43535822",
+    "milestone" :       "Won",
+    "probability" :     "95",
+    "close_date" :      "1349980200",
+    "created_time" :    "1356325843",
+    "entity_type" :     "deal",
+  	"owner_id": "123",
+    "contact_ids": ["123"]
+}
