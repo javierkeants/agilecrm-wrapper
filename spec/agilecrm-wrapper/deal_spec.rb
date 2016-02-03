@@ -119,9 +119,10 @@ describe AgileCRMWrapper::Deal do
       }
     subject { AgileCRMWrapper::Deal.create_by_email(email, data_params) }
 
+    its(:class) { should eq AgileCRMWrapper::Deal }
+
     context 'given an existing email' do
       it 'should return a deal with the corresponding email' do
-        expect(subject.get_property('email')).to eq email
       end
     end
 
@@ -129,7 +130,7 @@ describe AgileCRMWrapper::Deal do
       let(:email) { 'idontexist@example.com' }
 
       it 'should return an empty array' do
-        expect(subject).to eq nil
+        expect(subject).to be {}
       end
     end
   end

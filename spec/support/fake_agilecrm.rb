@@ -71,7 +71,11 @@ class FakeAgileCRM < Sinatra::Base
   end
 
   post '/dev/api/opportunity/email/:email' do
-    json_response 200, 'deals', 'create_deal_by_email'
+    if params['captures'].include? 'anitadrink@example.com'
+      json_response 200, 'deals', 'create_deal'
+    elsif params['captures'].include? 'idontexist@example.com'
+      json_response 200, 'deals', 'create_deal_no_results'
+    end
   end
 
   put '/dev/api/opportunity' do
