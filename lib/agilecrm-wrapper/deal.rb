@@ -101,10 +101,11 @@ module AgileCRMWrapper
     # end
 
     def update(options = {})
-      payload = self.class.parse_deal_fields(options)
-      payload['properties'] = merge_properties(payload['properties'])
-      merge!(payload)
-      response = AgileCRMWrapper.connection.put('opportunity', self)
+      # payload = self.class.parse_deal_fields(options)
+      # payload['properties'] = merge_properties(payload['properties'])
+      # merge!(payload)
+      payload = parse_deal_fields(options)
+      response = AgileCRMWrapper.connection.put('opportunity', payload)
       merge!(response.body)
     end
 
