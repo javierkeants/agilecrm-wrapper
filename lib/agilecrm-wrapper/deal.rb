@@ -105,7 +105,7 @@ module AgileCRMWrapper
       # payload['properties'] = merge_properties(payload['properties'])
       # merge!(payload)
       payload = parse_deal_fields(options)
-      response = AgileCRMWrapper.connection.put('opportunity/partial-update', payload)
+      response = AgileCRMWrapper.connection.put('opportunity/partial-update', options)
       merge!(response.body)
     end
 
