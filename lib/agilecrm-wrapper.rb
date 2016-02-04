@@ -43,7 +43,7 @@ module AgileCRMWrapper
         conn.request(:basic_auth, configuration.email, configuration.api_key)
         conn.response(:json, content_type: /\bjson$/)
         conn.response(:agilecrm_error)
-        conn.response :logger, ::Logger.new(STDOUT), bodies: false
+        conn.response :logger, ::Logger.new(STDOUT), bodies: true
         conn.adapter(Faraday.default_adapter)
       end
     end
