@@ -59,6 +59,13 @@ module AgileCRMWrapper
         contact
       end
 
+      def change_owner(owner_email, contact_id)
+        response = AgileCRMWrapper.connection.post(
+          'contacts/change-owner', "owner_email=#{owner_email}&contact_id=#{contact_id}",
+          'content-type' => 'application/x-www-form-urlencoded'
+        )
+      end
+
       def delete(arg)
         AgileCRMWrapper.connection.delete("contacts/#{arg}")
       end
